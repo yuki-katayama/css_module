@@ -10,6 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #050505;
+  animation: 5s changeColor linear infinite;
 }
 
 .cube1 {
@@ -63,5 +64,14 @@ body {
   }
   100% {
     transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
