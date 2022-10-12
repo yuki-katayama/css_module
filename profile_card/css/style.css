@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  background: #fff;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  height: 450px;
+}
+
+.card:hover .imgBox {
+  width: 250px;
+  height: 250px;
+}
+
+.card .lines {
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.card .lines::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+  animation: animate1 4s linear infinite;
+}
+
+.card .lines::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #333;
+}
+
+.card .imgBox {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: #000;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.card .imgBox img {
+  position: absolute;
+  z-index: 1;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  filter: grayscale(1);
+}
+
+.card .imgBox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(transparent, red, red, red, transparent);
+  width: 600px;
+  height: 120px;
+  animation: animate2 4s linear infinite;
+}
+
+.card .imgBox::after {
+  content: "";
+  position: absolute;
+  background: #333;
+  inset: 2px;
+}
+
+.card .content {
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.card .content .detail {
+  font-size: 1.2rem;
+  color: white;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
