@@ -18,4 +18,11 @@ https://user-images.githubusercontent.com/59300301/195160914-985acb0c-d708-4238-
 
 https://user-images.githubusercontent.com/59300301/195316227-2710f457-ea81-48e8-a3e6-723d2de9fa86.mov
 
+## profile card
+
+[Source - Profile Card](https://github.com/yuki-katayama/css_module/tree/main/profile_card)
+
+https://user-images.githubusercontent.com/59300301/195354470-342a9170-9602-4a65-af85-31b792a47f79.mov
+
+
 
