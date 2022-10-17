@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Login Form</title>
+</head>
+<body>
+	<div class="login">
+		<h2 class="title" id="title">Login</h2>
+		<div class="input">
+			<input type="text" placeholder="UserName"/>
+		</div>
+		<div class="input">
+			<input type="text" placeholder="password"/>
+		</div>
+		<div class="input">
+			<input type="submit" placeholder="Login" id="submit"/>
+		</div>
+		<div class="group">
+			<a href="">Forget Password</a>
+			<a href="">Signup</a>
+		</div>
+	</div>
+	<div class="colors">
+		<span style="--color:#1dd1a1;" onclick="changeColor('#1dd1a1')"></span>
+		<span style="--color:#ff6b6b;" onclick="changeColor('#ff6b6b')"></span>
+		<span style="--color:#2e86de;" onclick="changeColor('#2e86de')"></span>
+		<span style="--color:#f368e0;" onclick="changeColor('#f368e0')"></span>
+		<span style="--color:#ff9f43;" onclick="changeColor('#ff9f43')"></span>
+	</div>
+	<script type="text/javascript">
+		let submit = document.getElementById("submit");
+		let title = document.getElementById("title");
+		function changeColor(color) {
+	 		document.body.style.background = color;
+			submit.style.background = color
+			title.style.borderColor=color;
+			document.querySelectorAll('span').forEach(function(item) {
+				item.classList.remove("active");
+			})
+			event.target.classList.add("active");
+		}
+	</script>
+</body>
+</html>
